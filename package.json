@@ -1,0 +1,23 @@
+{
+  "name": "exercise1",
+  "version": "0.0.1",
+  "description": "exercise 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FE-star/exercise1.git"
+  },
+  "keywords": [
+    "exercise",
+    "1"
+  ],
+  "author": "Daniel Yang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FE-star/exercise1/issues"
+  },
+  "homepage": "https://github.com/FE-star/exercise1#readme"
+}
