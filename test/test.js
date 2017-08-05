@@ -26,11 +26,11 @@ describe('assert', function () {
 
   it('可以捕获并验证函数fn的错误', function () {
     function fn() {
-       throw new Error('错误信息')
+       xxxxx
     }
     // 修改下面代码使得满足测试描述
     assert.throws(fn,function(err){
-        if((err instanceof Error) && /错误/.test(err)){
+        if((err instanceof Error) && /xxxxx is not defined/.test(err)){
            return true;
         }
     },
