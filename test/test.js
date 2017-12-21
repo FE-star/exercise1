@@ -38,3 +38,26 @@ describe('assert', function () {
     );
   })
 })
+
+
+//如果不加 g的话 就只处理首次匹配到的一部分
+describe("reg",function(){
+    it('去除空格',function(){
+         assert.equal("abc", "   abc ".replace(/^\s+|\s+$/g,'')) 
+    })  
+})
+
+
+// replace
+describe("replace",function(){
+    it('替换字符',function(){
+         let str = "@@哈哈@@";
+         let reg = str.replace(/@@(.+)@@/g,'<blink>$1</blink>')
+         //. 代表所有的字符 
+         //再次验证 贪婪和非贪婪是在 整个表达式匹配成功的前提下进行的
+         assert.equal('<blink>哈哈</blink>', str.replace(/@@(.+)@@/,'<blink>$1</blink>'))  
+         //assert.equal("<blink></blink>", "<a href=>   abc ".replace(/^\s+|\s+$/,'')) 
+    })  
+})
+
+
