@@ -23,7 +23,6 @@ describe('assert', function () {
     // 修改下面代码使得满足测试描述
     // assert.equal(a, b)
     assert.deepEqual(a, b)
-  // })
   })
 
   it('可以捕获并验证函数fn的错误', function () {
@@ -32,6 +31,6 @@ describe('assert', function () {
     }
     // 修改下面代码使得满足测试描述
     // fn()
-    assert.doesNotThrow(fn, ReferenceError, '引用错误')
+    assert.throws(fn, ReferenceError, '引用错误')
   })
-}
+})
