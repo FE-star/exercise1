@@ -17,7 +17,7 @@ describe('assert', function () {
     }
     var b = {
       c: {
-        e: 2
+        e: 1
       }
     }
     // 修改下面代码使得满足测试描述
