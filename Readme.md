@@ -1,5 +1,5 @@
 # Readme
-
+[![Build Status](https://www.travis-ci.org/Ivanwangcy/exercise1.svg?branch=master)](https://travis-ci.org/Ivanwangcy/exercise1)
 ### 步骤
 
 * 全局安装 mocha
