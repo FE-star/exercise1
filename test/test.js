@@ -1,5 +1,4 @@
 var assert = require('assert')
-var should = require('should')
 
 describe('Array', function () {
   describe('#indexOf()', function () {
@@ -30,6 +29,6 @@ describe('assert', function () {
       xxx;
     }
     // 修改下面代码使得满足测试描述
-    fn.should.throw('xxx is not defined')
+    assert.throws(fn, ReferenceError, 'xxx is not defined')
   })
 })

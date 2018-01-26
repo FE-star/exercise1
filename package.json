@@ -20,7 +20,5 @@
     "url": "https://github.com/FE-star/exercise1/issues"
   },
   "homepage": "https://github.com/FE-star/exercise1#readme",
-  "dependencies": {
-    "should": "^13.2.1"
-  }
+  "dependencies": {}
 }
