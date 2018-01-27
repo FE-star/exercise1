@@ -19,5 +19,6 @@
   "bugs": {
     "url": "https://github.com/FE-star/exercise1/issues"
   },
-  "homepage": "https://github.com/FE-star/exercise1#readme"
+  "homepage": "https://github.com/FE-star/exercise1#readme",
+  "dependencies": {}
 }
