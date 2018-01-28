@@ -29,13 +29,13 @@ describe('assert', function () {
     }
 
     assert.throws(
-      () => {
-        try {
-          fn()
-        } catch (e) {
-          throw new Error(e);
+      fn,
+      (err) => {
+        if (err instanceof Error && /xxx is not defined/.test(err)) {
+          return true;
         }
-      }
+      },
+      '不是期望的错误'
     );
   })
 })
