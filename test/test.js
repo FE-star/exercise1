@@ -29,6 +29,6 @@ describe('assert', function () {
       xxx;
     }
     // 修改下面代码使得满足测试描述
-    assert.throws(fn, Error) 
+    assert.throws(fn, /xxx is not defined/) 
   })
 })
