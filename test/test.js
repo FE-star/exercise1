@@ -3,7 +3,7 @@ var assert = require('assert')
 describe('Array', function() {
   describe('#indexOf()', function() {
     it('should return -1 when the value is not present', function() {
-      assert.equal(-1, -1, [1, 2, 3]/* 填空题 */)
+      assert.equal(-1, [1, 2, 3].indexOf(0))
     })
   })
 })
@@ -29,7 +29,6 @@ describe('assert', function () {
       xxx;
     }
     // 修改下面代码使得满足测试描述
-    // fn();
-    assert.ifError(fn(), 'xxx未定义');
+    assert.throws(fn, "不是预期的错误");
   })
 })
