@@ -33,5 +33,6 @@ describe('assert', function () {
     // 修改下面代码使得满足测试描述
     // fn()
     assert.throws(fn)
+    // test linux
   })
 })
