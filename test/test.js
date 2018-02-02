@@ -35,7 +35,8 @@ describe('assert', function () {
       function () {
         fn();
         throw new Error("错误值");
-      }
+      },
+      Error
     )
   })
 })
