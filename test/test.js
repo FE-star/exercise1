@@ -7,7 +7,6 @@ describe('Array', function () {
     })
   })
 })
-
 describe('assert', function () {
   it('a和b应当深度相等', function () {
     var a = {
