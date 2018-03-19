@@ -13,7 +13,6 @@ describe('assert', function () {
     var a = {
       c: {
         e: 1
-
       }
     }
     var b = {
@@ -29,8 +28,7 @@ describe('assert', function () {
     function fn() {
       xxx;
     }
-
-
+    
     // 修改下面代码使得满足测试描述
     assert.throws(
       function () {
