@@ -29,10 +29,12 @@ describe('assert', function () {
       xxx;
     }
     // 修改下面代码使得满足测试描述
-      try{
-          fn()
-      } catch(e){
-        assert.fail(e)
-      }
+    //   try{
+    //       fn()
+    //   } catch(e){
+    //     assert.fail(e)
+    //   }
+      //使用断言api完成断言任务。。。
+      assert.throws(fn, err => (err instanceof Error && /ReferenceError: xxx is not defined/.test(err)) ?  true : false, 'unexpected error')
   })
 })
