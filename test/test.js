@@ -31,12 +31,14 @@ describe('assert', function () {
 
     // 修改下面代码使得满足测试描述
     // fn()
-    try {
-      fn()
-    } catch (err) {
-      console.log(err);
-    }
+
+
+    assert.throws(
+      () => {
+        fn();
+      },
+      Error
+    )
 
   })
-
 })
