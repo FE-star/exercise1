@@ -3,7 +3,7 @@ var assert = require('assert')
 describe('Array', function() {
   describe('#indexOf()', function() {
     it('should return -1 when the value is not present', function() {
-      assert.equal(-1, [1, 2, 3]/* 填空题 */)
+      assert.equal(-1, [1, 2, 3].indexOf(4)/* 填空题 */)
     })
   })
 })
@@ -21,12 +21,19 @@ describe('assert', function () {
       }
     }
     // 修改下面代码使得满足测试描述
-    assert.equal(a, b)
+    // assert.equal(a, b)
+    // 说明：assert.deepStrictEqual是测试是否深度项目的方法
+    assert.deepStrictEqual(a,b);
   })
 
   it('可以捕获并验证函数fn的错误', function () {
     function fn() {
-      xxx;
+      assert.throws(
+        () => {
+          throw new Error('错误信息');
+        },
+        Error
+      );
     }
     // 修改下面代码使得满足测试描述
     fn()
