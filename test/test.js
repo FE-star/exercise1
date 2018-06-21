@@ -30,7 +30,6 @@ describe('assert', function () {
     }
     // fn()
     assert.throws(fn, '报错啦');
-    // 修改下面代码使得满足测试描述
   })
 
   it('可以捕获并验证函数fn的错误2', function () {
