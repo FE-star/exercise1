@@ -26,12 +26,11 @@ describe('assert', function () {
 
     it('可以捕获并验证函数fn的错误', function () {
         function fn(error) {
-            return error;
+            XXX;
         }
 
         // 修改下面代码使得满足测试描述
-        assert.throws(function () {
-            throw new fn("Wrong value");
-        }, fn);
+        fn();
+        assert.throws(fn);
     });
 });
