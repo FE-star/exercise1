@@ -25,7 +25,7 @@ describe('assert', function () {
     });
 
     it('可以捕获并验证函数fn的错误', function () {
-        function fn(error) {
+        function fn() {
             XXX;
         }
 
