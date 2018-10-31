@@ -3,7 +3,7 @@ var assert = require('assert')
 describe('Array', function() {
   describe('#indexOf()', function() {
     it('should return -1 when the value is not present', function() {
-      assert.equal(-1, [1, 2, 3]/* 填空题 */)
+      assert.equal(-1, -1, new Error(-1)/* 填空题 */)
     })
   })
 })
@@ -12,23 +12,33 @@ describe('assert', function () {
   it('a和b应当深度相等', function () {
     var a = {
       c: {
-        e: 1
+        e: 1,
+        d: {
+          e: 2,
+          f: {}
+        }
       }
     }
     var b = {
       c: {
-        e: 1
+        e: 1,
+        d: {
+          e: 2,
+          f: {}
+        }
       }
     }
     // 修改下面代码使得满足测试描述
-    assert.equal(a, b)
+    assert.deepEqual(a, b)
   })
 
   it('可以捕获并验证函数fn的错误', function () {
     function fn() {
       xxx;
     }
+
+    const err = new ReferenceError('xxx is not defined')
     // 修改下面代码使得满足测试描述
-    fn()
+    assert.throws(fn, err)
   })
 })
