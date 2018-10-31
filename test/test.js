@@ -1,9 +1,10 @@
 var assert = require('assert')
 
-describe('Array', function() {
-  describe('#indexOf()', function() {
-    it('should return -1 when the value is not present', function() {
-      assert.equal(-1, [1, 2, 3]/* 填空题 */)
+describe('Array', function () {
+  describe('#indexOf()', function () {
+    it('should return -1 when the value is not present', function () {
+      // assert.equal(-1, [1, 2, 3]/* 填空题 */)
+      assert.equal([1, 2, 3].indexOf(4), -1)
     })
   })
 })
@@ -21,7 +22,8 @@ describe('assert', function () {
       }
     }
     // 修改下面代码使得满足测试描述
-    assert.equal(a, b)
+    // assert.equal(a, b)
+    assert.deepEqual(a, b)
   })
 
   it('可以捕获并验证函数fn的错误', function () {
@@ -30,5 +32,6 @@ describe('assert', function () {
     }
     // 修改下面代码使得满足测试描述
     fn()
+    assert.throw(fn())
   })
 })
