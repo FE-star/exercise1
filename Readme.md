@@ -15,8 +15,10 @@ npm install mocha -g
 mocha
 ```
 
-* 打开 `./test/test.js` 修改代码跑通测试用例 
+* 打开 `./test/test.js` 修改代码跑通测试用例
 
 ### 参考
 
 * [NodeJS Assert API](http://nodejs.cn/api/assert.html)
+
+* 测试一下
