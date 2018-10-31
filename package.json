@@ -4,7 +4,7 @@
   "description": "exercise 1",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --watch"
   },
   "repository": {
     "type": "git",
