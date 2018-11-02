@@ -29,10 +29,11 @@ describe('assert', function() {
       xxx;
     }
     // 修改下面代码使得满足测试描述
-    try {
-      fn();
-    } catch (err) {
-      assert.ifError(err);
-    }
+    assert.throws(fn, Error);
+    // try {
+    //   fn();
+    // } catch (err) {
+    //   assert.ifError(err);
+    // }
   });
 });
