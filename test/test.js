@@ -1,12 +1,15 @@
 var assert = require('assert')
 
+// describe块称为"测试套件"（test suite），表示一组相关的测试。
 describe('Array', function() {
   describe('#indexOf()', function() {
+    // it块称为"测试用例"（test case），表示一个单独的测试，是测试的最小单位。
     it('should return -1 when the value is not present', function() {
-      assert.equal(-1, [1, 2, 3]/* 填空题 */)
+      assert.equal(-1, [1, 2, 3].indexOf(5))
     })
   })
 })
+
 
 describe('assert', function () {
   it('a和b应当深度相等', function () {
@@ -20,8 +23,8 @@ describe('assert', function () {
         e: 1
       }
     }
-    // 修改下面代码使得满足测试描述
-    assert.equal(a, b)
+    // deepEqual 深度相等
+    assert.deepEqual(a, b)
   })
 
   it('可以捕获并验证函数fn的错误', function () {
@@ -29,6 +32,6 @@ describe('assert', function () {
       xxx;
     }
     // 修改下面代码使得满足测试描述
-    fn()
+    assert.throws(fn)
   })
 })
