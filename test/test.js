@@ -3,7 +3,7 @@ var assert = require('assert')
 describe('Array', function() {
   describe('#indexOf()', function() {
     it('should return -1 when the value is not present', function() {
-      assert.equal(-1, [1, 2, 3]/* 填空题 */)
+      assert.equal(-1, [1, 2, 3].indexOf(4))
     })
   })
 })
@@ -20,8 +20,23 @@ describe('assert', function () {
         e: 1
       }
     }
-    // 修改下面代码使得满足测试描述
-    assert.equal(a, b)
+
+		
+    function depth(e) {
+      let maxDepth = 1;
+
+      for (let property in e)	{
+      if (!e.hasOwnProperty(property)) continue;
+	if (typeof e[property] === 'object') {
+	  let currentDepth = 1 + depth(e[property]);
+	  maxDepth = Math.max(maxDepth, currentDepth);
+	}
+      }
+
+      return depth;
+    }
+    
+    assert.equal(depth(a), depth(b))
   })
 
   it('可以捕获并验证函数fn的错误', function () {
@@ -29,6 +44,9 @@ describe('assert', function () {
       xxx;
     }
     // 修改下面代码使得满足测试描述
-    fn()
+    assert.throws(fn,{
+      name: 'ReferenceError',   
+      message: 'xxx is not defined',
+    });
   })
 })
