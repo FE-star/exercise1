@@ -35,8 +35,9 @@ describe('assert', function () {
     //   throw new Error('a new error');
     // }
 
-    it('throws a TypeError', function () {
-      should.throws(target, TypeError);
-     });
+    // it('throws a TypeError', function () {
+    //   should.throws(target, TypeError);
+    //  });
+    assert.throws(fn)
   })
 })
