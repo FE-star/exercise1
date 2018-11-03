@@ -21,7 +21,7 @@ describe('assert', function() {
       }
     };
     // 修改下面代码使得满足测试描述
-    assert.deepStrictEqual(a, b);
+    assert.deepEqual(a, b);
   });
 
   it('可以捕获并验证函数fn的错误', function() {
