@@ -48,14 +48,15 @@ describe('assert', function () {
         }
 
         // 修改下面代码使得满足测试描述
-        assert.equal(true, compare(a,b))
+        // assert.equal(true, compare(a,b))
+        assert.deepEqual(a,b)
     })
 
     it('可以捕获并验证函数fn的错误', function (done) {
         function fn(done) {
-            return done('err');
+            xxx;
         }
         // 修改下面代码使得满足测试描述
-        fn(done)
+        assert.throws(fn)
     })
 })
