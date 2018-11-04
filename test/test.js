@@ -29,6 +29,6 @@ describe('assert', function () {
       xxx;
     }
     // 修改下面代码使得满足测试描述
-    assert.throws(fn)
+    assert.throws(fn,/ReferenceError: xxx is not defined/)
   })
 })
