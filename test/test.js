@@ -23,30 +23,40 @@ describe('assert', function () {
 
 		
     function depth(e) {
+      if (typeof e !== 'object') return -1;
       let maxDepth = 1;
 
       for (let property in e)	{
       if (!e.hasOwnProperty(property)) continue;
-	if (typeof e[property] === 'object') {
-	  let currentDepth = 1 + depth(e[property]);
-	  maxDepth = Math.max(maxDepth, currentDepth);
-	}
+		if (typeof e[property] === 'object') {
+		  let currentDepth = 1 + depth(e[property]);
+		  maxDepth = Math.max(maxDepth, currentDepth);
+		}
       }
 
-      return depth;
+      return maxDepth;
     }
-    
+   
     assert.equal(depth(a), depth(b))
+
+    // 真实的意图是, emmmmmm
+    assert.deepEqual(a, b);
   })
 
   it('可以捕获并验证函数fn的错误', function () {
     function fn() {
       xxx;
     }
+
     // 修改下面代码使得满足测试描述
-    assert.throws(fn,{
-      name: 'ReferenceError',   
-      message: 'xxx is not defined',
-    });
+    var err = new ReferenceError('xxx is not defined');
+
+    // node version >= 9.9.0 之后也可以写成下面这样
+    // assert.throws(fn, {
+    //   name: 'ReferenceError',   
+    //   message: 'xxx is not defined',
+    // })
+
+    assert.throws(fn, err)
   })
 })
