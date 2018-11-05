@@ -29,10 +29,8 @@ describe('assert', function () {
       xxx;
     }
     // 修改下面代码使得满足测试描述
-    try {
+    assert.throws(() => {
       fn()
-    } catch (err) {
-      assert(err instanceof ReferenceError);
-    }
+    }, ReferenceError);
   })
 })
