@@ -25,14 +25,10 @@ describe('assert', function () {
     })
 
     it('可以捕获并验证函数fn的错误', function () {
-        function fn(...rest) {
-            var sum = 0;
-            for (let n of rest) {
-                sum += n;
-            }
-            return sum;
+        function fn() {
+            throw new Error('Wrong value');
         }
         // 修改下面代码使得满足测试描述
-        assert.strictEqual(fn(1,2), 3);
+        assert.throws(fn);
     })
 })
