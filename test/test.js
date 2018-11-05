@@ -24,14 +24,13 @@ describe('assert', function () {
     assert.deepEqual(a, b)
   })
 
-  it('可以捕获并验证函数fn的错误', function () {
+    it('可以捕获并验证函数fn的错误', function () {
 	  function fn() {
-			xxx;
+			throw new Error('Wrong value');
 		}
 		
-    assert.throws((fn)=>{
-			throw new Error('Wrong value');
-		})
+    assert.throws(fn,Error)
+	//不能调用fn，否则会报错
 	
   })
 })
