@@ -21,7 +21,7 @@ describe('assert', function () {
       }
     };
     // 修改下面代码使得满足测试描述
-    assert.equal(JSON.stringify(a).length, JSON.stringify(b).length);
+    assert.deepEqual(a, b);
   });
 
   it('可以捕获并验证函数fn的错误', function () {
