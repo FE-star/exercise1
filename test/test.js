@@ -26,9 +26,14 @@ describe('assert', function () {
 
     it('可以捕获并验证函数fn的错误', function () {
         function fn() {
-            console.log(111)
+            xxx;
         }
         // 修改下面代码使得满足测试描述
-        fn()
+        try {
+            fn()
+        } catch (error) {
+            assert.throws(error.message, "代码异常")
+        }
+
     })
 })
