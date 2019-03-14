@@ -29,12 +29,6 @@ describe('assert', function () {
       xxx;
     }
     // 修改下面代码使得满足测试描述
-    try {
-      fn()
-    }catch(e) {
-      assert.throws(function() {
-        throw new Error("函数执行出错");
-      }, e)
-    }
+    assert.throws(fn, ReferenceError, '没有抛出期望的信息')
   })
 })
