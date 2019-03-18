@@ -29,19 +29,7 @@ describe('assert', function () {
           xxx;
       };
     // 修改下面代码使得满足测试描述
-      assert.throws(
-          function() {
-              try {
-                  fn();
-              }
-              catch(error) {
-                  throw new Error(error);
-                  // expected output: ReferenceError: nonExistentFunction is not defined
-                  // Note - error messages will vary depending on browser
-              }
-          },
-          Error,
-          '不符合预期的错误类型'
+      assert.throws(fn,'xxx is not define'
       );
   })
 })
