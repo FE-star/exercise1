@@ -4,7 +4,7 @@
   "description": "exercise 1",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/FE-star/exercise1/issues"
   },
-  "homepage": "https://github.com/FE-star/exercise1#readme"
+  "homepage": "https://github.com/FE-star/exercise1#readme",
+  "devDependencies": {
+    "jest": "^28.1.2"
+  }
 }
