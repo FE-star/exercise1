@@ -15,6 +15,9 @@ npm run test
 ```
 
 * 打开 `./test/test.spec.js` 修改代码跑通测试用例 
+* Pull Request
+    * 怎么Pull Request，参考：http://www.ruanyifeng.com/blog/2017/07/pull_request.html
+
 
 ### 参考
 
