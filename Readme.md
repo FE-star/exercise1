@@ -1,4 +1,4 @@
-# Readme
+# Readme [![Node.js CI](https://github.com/FE-star/exercise1/actions/workflows/node.js.yml/badge.svg)](https://github.com/FE-star/exercise1/actions/workflows/node.js.yml)
 
 ### 步骤
 
