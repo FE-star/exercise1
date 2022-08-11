@@ -1,10 +1,10 @@
 {
   "name": "exercise1",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "exercise 1",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/FE-star/exercise1#readme",
   "devDependencies": {
+    "@types/jest": "^28.1.6",
     "jest": "^28.1.2"
   }
 }
