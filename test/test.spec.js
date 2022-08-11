@@ -32,6 +32,6 @@ describe('assert', function () {
     assert.throws(fn, {
       name: "ReferenceError",
       message: 'xxx is not defined',
-    })
+    }, '没有抛出期望的错误')
   })
 })
