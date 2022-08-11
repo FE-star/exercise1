@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/FE-star/exercise1#readme",
   "devDependencies": {
+    "@types/jest": "^28.1.6",
     "jest": "^28.1.2"
   }
 }
