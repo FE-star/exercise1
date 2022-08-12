@@ -1,34 +1,37 @@
-var assert = require('assert')
+var assert = require("assert");
 
-describe('Array', function() {
-  describe('#indexOf()', function() {
-    test('当value不在数组中应当返回-1', function() {
-      assert.equal(-1, [1, 2, 3]/* 填空题 */)
-    })
-  })
-})
+describe("Array", function () {
+  describe("#indexOf()", function () {
+    test("当value不在数组中应当返回-1", function () {
+      assert.equal(-1, [1, 2, 3].indexOf(4));
+    });
+  });
+});
 
-describe('assert', function () {
-  test('a和b应当深度相等', function () {
+describe("assert", function () {
+  test("a和b应当深度相等", function () {
     var a = {
       c: {
         e: 1
       }
-    }
+    };
     var b = {
       c: {
         e: 1
       }
-    }
+    };
     // 修改下面代码使得满足测试描述
-    assert.equal(a, b)
-  })
+    assert.deepEqual(a, b);
+  });
 
-  test('可以捕获并验证函数fn的错误', function () {
+  test("可以捕获并验证函数fn的错误", function () {
     function fn() {
       xxx;
     }
     // 修改下面代码使得满足测试描述
-    fn()
-  })
-})
+    assert.throws(fn, {
+      name: "ReferenceError",
+      message: "xxx is not defined"
+    });
+  });
+});
