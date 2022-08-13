@@ -21,7 +21,7 @@ describe('assert', function () {
       }
     }
     // 修改下面代码使得满足测试描述
-    assert.equal(JSON.stringify(a), JSON.stringify(b))
+    assert.deepEqual(a, b)
   })
 
   test('可以捕获并验证函数fn的错误', function () {
@@ -29,10 +29,8 @@ describe('assert', function () {
       xxx
     }
     // 修改下面代码使得满足测试描述
-    try {
+    assert.throws(() => {
       fn()
-    } catch (error) {
-      console.error(error)
-    }
+    })
   })
 })
