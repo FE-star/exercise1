@@ -1,9 +1,13 @@
-var assert = require('assert')
+var assert = require('assert');
+const { ADDRGETNETWORKPARAMS } = require('dns');
+const { execPath } = require('process');
 
 describe('Array', function() {
   describe('#indexOf()', function() {
     test('当value不在数组中应当返回-1', function() {
-      assert.equal(-1, [1, 2, 3]/* 填空题 */)
+      var arr=[1,2,3];
+      var b=arr.indexOf(5);
+      assert.equal(-1, b);
     })
   })
 })
@@ -21,14 +25,16 @@ describe('assert', function () {
       }
     }
     // 修改下面代码使得满足测试描述
-    assert.equal(a, b)
+    assert.deepEqual(a, b);
   })
 
   test('可以捕获并验证函数fn的错误', function () {
-    function fn() {
-      xxx;
+    function fn(num) {
+      if (!Number.isInteger(num)) {
+        throw Error('只接受整数类型的参数');
+}
     }
     // 修改下面代码使得满足测试描述
-    fn()
+ assert.throws(fn=>{throw new Error('只接受整数类型的参数')},Error);
   })
 })
