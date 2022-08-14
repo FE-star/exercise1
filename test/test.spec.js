@@ -32,11 +32,6 @@ describe("assert", function () {
       xxx;
     }
     // 修改下面代码使得满足测试描述
-    // 这么简单么
-    try {
-      fn();
-    } catch (error) {
-      console.log(error);
-    }
+    assert.throws(fn, Error);
   });
 });
