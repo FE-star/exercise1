@@ -2,11 +2,9 @@ const { rejects } = require('assert');
 var assert = require('assert');
 
 let describe = (string, cb) => {
-  console.log(string);
   cb()
 }
 let test = (errorMsg, cb) => {
-  console.log(errorMsg);
   cb()
 }
 describe('Array', function () {
@@ -19,7 +17,6 @@ describe('Array', function () {
           result = index
         }
       })
-      console.log(result, 'result')
       assert.equal(result, -1/* 填空题 */)
     })
   })
@@ -46,7 +43,6 @@ describe('assert', function () {
       }
       return max
     }
-    console.log(getObjDeep(a, 0))
     // 修改下面代码使得满足测试描述
     assert.equal(getObjDeep(a, 0), getObjDeep(b, 0))
   })
@@ -59,7 +55,6 @@ describe('assert', function () {
     }
     // 修改下面代码使得满足测试描述
     fn().catch(err => {
-      console.log(err);
     })
   })
 })
