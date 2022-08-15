@@ -10,14 +10,7 @@ let test = (errorMsg, cb) => {
 describe('Array', function () {
   describe('#indexOf()', function () {
     test('当value不在数组中应当返回-1', function () {
-      let result = -1
-      let arr = [1, 2, 3]
-      arr.forEach((item, index) => {
-        if (item === -1) {
-          result = index
-        }
-      })
-      assert.equal(result, -1/* 填空题 */)
+      assert.equal(-1, [1, 2, 3].indexOf(-1))
     })
   })
 })
@@ -49,12 +42,12 @@ describe('assert', function () {
 
   test('可以捕获并验证函数fn的错误', function () {
     function fn() {
-      return new Promise((resolve, reject) => {
-        reject('错误')
-      })
+      xxx
     }
     // 修改下面代码使得满足测试描述
-    fn().catch(err => {
+    assert.throws(fn, {
+      name: 'error',
+      message: ''
     })
   })
 })
