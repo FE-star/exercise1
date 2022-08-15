@@ -1,9 +1,26 @@
-var assert = require('assert')
+const { rejects } = require('assert');
+var assert = require('assert');
 
-describe('Array', function() {
-  describe('#indexOf()', function() {
-    test('当value不在数组中应当返回-1', function() {
-      assert.equal(-1, [1, 2, 3]/* 填空题 */)
+let describe = (string, cb) => {
+  console.log(string);
+  cb()
+}
+let test = (errorMsg, cb) => {
+  console.log(errorMsg);
+  cb()
+}
+describe('Array', function () {
+  describe('#indexOf()', function () {
+    test('当value不在数组中应当返回-1', function () {
+      let result = -1
+      let arr = [1, 2, 3]
+      arr.forEach((item, index) => {
+        if (item === -1) {
+          result = index
+        }
+      })
+      console.log(result, 'result')
+      assert.equal(result, -1/* 填空题 */)
     })
   })
 })
@@ -20,15 +37,29 @@ describe('assert', function () {
         e: 1
       }
     }
+    function getObjDeep(obj, max = 0) {
+      if (obj && obj instanceof Object && !(obj instanceof Array)) {
+        max++
+        Object.keys(obj).forEach(key => {
+          max = getObjDeep(obj[key], max)
+        })
+      }
+      return max
+    }
+    console.log(getObjDeep(a, 0))
     // 修改下面代码使得满足测试描述
-    assert.equal(a, b)
+    assert.equal(getObjDeep(a, 0), getObjDeep(b, 0))
   })
 
   test('可以捕获并验证函数fn的错误', function () {
     function fn() {
-      xxx;
+      return new Promise((resolve, reject) => {
+        reject('错误')
+      })
     }
     // 修改下面代码使得满足测试描述
-    fn()
+    fn().catch(err => {
+      console.log(err);
+    })
   })
 })
