@@ -3,7 +3,7 @@ var assert = require('assert')
 describe('Array', function() {
   describe('#indexOf()', function() {
     test('当value不在数组中应当返回-1', function() {
-      assert.equal(-1, [1, 2, 3]/* 填空题 */)
+      assert.equal(-1, [1, 2, 3].indexOf(4))
     })
   })
 })
@@ -21,14 +21,19 @@ describe('assert', function () {
       }
     }
     // 修改下面代码使得满足测试描述
-    assert.equal(a, b)
+    assert.deepEqual(a, b)
   })
 
   test('可以捕获并验证函数fn的错误', function () {
     function fn() {
-      xxx;
+      throw new Error("Wrong value");
     }
-    // 修改下面代码使得满足测试描述
-    fn()
+    // 修改下面代码使得满足测试描述 
+
+    assert.throws(
+      fn,
+      Error,
+      '不符合预期的错误类型'
+    )
   })
 })
