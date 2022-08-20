@@ -1,15 +1,15 @@
-var assert = require('assert')
+var assert = require('assert');
 
-describe("Array", function () {
-  describe("#indexOf()", function () {
-    test("当value不在数组中应当返回-1", function () {
+describe('Array', function () {
+  describe('#indexOf()', function () {
+    test('当value不在数组中应当返回-1', function () {
       assert.equal(-1, [1, 2, 3].indexOf(0) /* 填空题 */);
     });
   });
 });
 
-describe("assert", function () {
-  test("a和b应当深度相等", function () {
+describe('assert', function () {
+  test('a和b应当深度相等', function () {
     var a = {
       c: {
         e: 1,
@@ -24,7 +24,7 @@ describe("assert", function () {
     assert.deepEqual(a, b);
   });
 
-  test("可以捕获并验证函数fn的错误", function () {
+  test('可以捕获并验证函数fn的错误', function () {
     function fn() {
       xxx;
     }
