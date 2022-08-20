@@ -1,4 +1,4 @@
-# Readme [![Node.js CI](https://github.com/chris-wang/exercise2/actions/workflows/node.js.yml/badge.svg)](https://github.com/chris-wang/exercise2/actions/workflows/node.js.yml)
+# Readme [![Node.js CI](https://github.com/chris-wang/exercise1/actions/workflows/node.js.yml/badge.svg)](https://github.com/chris-wang/exercise1/actions/workflows/node.js.yml)
 
 ### 步骤
 
