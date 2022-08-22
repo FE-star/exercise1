@@ -29,10 +29,6 @@ describe('assert', function () {
       xxx;
     }
     // 修改下面代码使得满足测试描述
-    try {
-      fn()
-    } catch (e) {
-      console.error(e)
-    }
+    expect(fn).toThrow()
   })
 })
