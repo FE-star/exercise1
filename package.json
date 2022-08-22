@@ -4,7 +4,8 @@
   "description": "exercise 1",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --watchAll",
+    "test-once": "jest"
   },
   "repository": {
     "type": "git",
